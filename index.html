@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebNova Precision Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="calc-container">
+        <header class="brand-header">
+            <div class="main-brand">WebNova Studio</div>
+            <div class="sub-brands">
+                <span>RR Webdesigners</span>
+                <span class="separator">|</span>
+                <span>Code Craft Academic</span>
+            </div>
+        </header>
+
+        <form class="calculator" name="calc">
+            <input class="display" type="text" name="txt" readonly placeholder="0">
+            
+            <span class="btn clear" onclick="document.calc.txt.value=''">C</span>
+            <span class="btn operator" onclick="document.calc.txt.value+='/'">/</span>
+            <span class="btn operator" onclick="document.calc.txt.value+='*'">×</span>
+            
+            <span class="btn" onclick="document.calc.txt.value+='7'">7</span>
+            <span class="btn" onclick="document.calc.txt.value+='8'">8</span>
+            <span class="btn" onclick="document.calc.txt.value+='9'">9</span>
+            <span class="btn operator" onclick="document.calc.txt.value+='-'">-</span>
+            
+            <span class="btn" onclick="document.calc.txt.value+='4'">4</span>
+            <span class="btn" onclick="document.calc.txt.value+='5'">5</span>
+            <span class="btn" onclick="document.calc.txt.value+='6'">6</span>
+            <span class="btn plus" onclick="document.calc.txt.value+='+'">+</span>
+            
+            <span class="btn" onclick="document.calc.txt.value+='1'">1</span>
+            <span class="btn" onclick="document.calc.txt.value+='2'">2</span>
+            <span class="btn" onclick="document.calc.txt.value+='3'">3</span>
+            
+            <span class="btn" onclick="document.calc.txt.value+='0'">0</span>
+            <span class="btn" onclick="document.calc.txt.value+='00'">00</span>
+            <span class="btn" onclick="document.calc.txt.value+='.'">.</span>
+            <span class="btn equal" onclick="document.calc.txt.value=eval(document.calc.txt.value)">=</span>
+        </form>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0f0a1e; /* Deep dark theme */
+    padding: 20px;
+}
+
+.calc-container {
+    width: 100%;
+    max-width: 360px;
+}
+
+/* Header Styling */
+.brand-header {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.main-brand {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #03b1ff;
+    text-transform: uppercase;
+}
+
+.sub-brands {
+    font-size: 10px;
+    font-weight: 300;
+    color: #7d7d7d;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+.separator {
+    margin: 0 5px;
+    color: #3d3d3d;
+}
+
+/* Calculator Grid */
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    background: #1a142e;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 0 30px 50px rgba(0,0,0,0.5);
+}
+
+.display {
+    grid-column: span 4;
+    height: 80px;
+    width: 100%;
+    background: #0f0a1e;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+    font-size: 28px;
+    color: #fff;
+    text-align: right;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.btn {
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #251d3a;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    user-select: none;
+}
+
+.btn:hover {
+    background: #2f254d;
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(2px);
+    background: #03b1ff;
+}
+
+/* Special Buttons */
+.clear {
+    grid-column: span 2;
+    background: #ff3077;
+}
+
+.operator {
+    background: #362a56;
+    color: #03b1ff;
+}
+
+.plus {
+    grid-row: span 2;
+    height: 100%;
+    background: #03b1ff;
+}
+
+.equal {
+    background: #74ff3b;
+    color: #0f0a1e;
+    font-weight: 700;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .calculator {
+        padding: 15px;
+        gap: 8px;
+    }
+    
+    .btn {
+        height: 55px;
+        font-size: 18px;
+    }
+    
+    .display {
+        height: 70px;
+        font-size: 24px;
+    }
+}
